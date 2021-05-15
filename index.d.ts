@@ -806,7 +806,7 @@ export interface LanguageDetectorAsyncModule extends Module {
   async: true;
   init(services: Services, detectorOptions: object, i18nextOptions: InitOptions): void;
   /** Must call callback passing detected language */
-  detect(callback: (lng: string) => void): void;
+  detect(callback: (lng: string | undefined) => void): void;
   cacheUserLanguage(lng: string): void;
 }
 
